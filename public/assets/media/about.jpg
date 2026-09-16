@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1920 1080" width="1920" height="1080">
+    
+      <defs>
+        <radialGradient id="glow-about" cx="70%" cy="50%" r="65%">
+          <stop offset="0%" stop-color="#2a2a2a" stop-opacity="0.5"/>
+          <stop offset="70%" stop-color="#080808" stop-opacity="0.95"/>
+          <stop offset="100%" stop-color="#020202" stop-opacity="1"/>
+        </radialGradient>
+      </defs>
+      <rect width="1920" height="1080" fill="url(#glow-about)"/>
+      <g opacity="0.12" stroke="#ffffff" stroke-width="1">
+        <path d="M700 0 L1400 1080 M850 0 L1550 1080 M1000 0 L1700 1080" />
+        <circle cx="1300" cy="540" r="280" fill="none" stroke-dasharray="4,6" />
+        <circle cx="1300" cy="540" r="420" fill="none" stroke-dasharray="12,18" />
+        <rect x="1100" y="340" width="400" height="400" fill="none" />
+      </g>
+    
+  </svg>

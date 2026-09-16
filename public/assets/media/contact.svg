@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1920 1080" width="1920" height="1080">
+    
+      <defs>
+        <radialGradient id="beacon" cx="70%" cy="50%" r="50%">
+          <stop offset="0%" stop-color="#ffffff" stop-opacity="0.3"/>
+          <stop offset="25%" stop-color="#3a3a3a" stop-opacity="0.3"/>
+          <stop offset="60%" stop-color="#0e0e0e" stop-opacity="0.8"/>
+          <stop offset="100%" stop-color="#020202" stop-opacity="1"/>
+        </radialGradient>
+      </defs>
+      <rect width="1920" height="1080" fill="url(#beacon)"/>
+      <circle cx="1344" cy="540" r="18" fill="#ffffff" opacity="0.6"/>
+      <circle cx="1344" cy="540" r="80" fill="none" stroke="rgba(255,255,255,0.18)" stroke-width="1"/>
+      <circle cx="1344" cy="540" r="220" fill="none" stroke="rgba(255,255,255,0.1)" stroke-width="1" stroke-dasharray="5,8"/>
+      <circle cx="1344" cy="540" r="380" fill="none" stroke="rgba(255,255,255,0.05)" stroke-width="1"/>
+      <line x1="700" y1="540" x2="1920" y2="540" stroke="rgba(255,255,255,0.1)" stroke-width="1"/>
+    
+  </svg>

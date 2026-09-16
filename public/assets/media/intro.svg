@@ -1,0 +1,29 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1920 1080" width="1920" height="1080">
+    
+      <defs>
+        <radialGradient id="glow-intro" cx="50%" cy="40%" r="60%">
+          <stop offset="0%" stop-color="#333333" stop-opacity="0.6"/>
+          <stop offset="60%" stop-color="#0e0e0e" stop-opacity="0.9"/>
+          <stop offset="100%" stop-color="#040404" stop-opacity="1"/>
+        </radialGradient>
+        <linearGradient id="beam" x1="0%" y1="0%" x2="100%" y2="100%">
+          <stop offset="0%" stop-color="rgba(255,255,255,0.15)"/>
+          <stop offset="40%" stop-color="rgba(255,255,255,0.02)"/>
+          <stop offset="100%" stop-color="transparent"/>
+        </linearGradient>
+      </defs>
+      <rect width="1920" height="1080" fill="url(#glow-intro)"/>
+      <g stroke="rgba(255,255,255,0.04)" stroke-width="1">
+        <line x1="0" y1="200" x2="1920" y2="200"/>
+        <line x1="0" y1="540" x2="1920" y2="540"/>
+        <line x1="0" y1="880" x2="1920" y2="880"/>
+        <line x1="480" y1="0" x2="480" y2="1080"/>
+        <line x1="960" y1="0" x2="960" y2="1080"/>
+        <line x1="1440" y1="0" x2="1440" y2="1080"/>
+      </g>
+      <polygon points="960,100 1560,950 360,950" fill="none" stroke="rgba(255,255,255,0.06)" stroke-width="2"/>
+      <polygon points="960,250 1420,880 500,880" fill="url(#beam)"/>
+      <circle cx="960" cy="500" r="320" fill="none" stroke="rgba(255,255,255,0.05)" stroke-width="1.5" stroke-dasharray="8,12"/>
+      <circle cx="960" cy="500" r="180" fill="none" stroke="rgba(255,255,255,0.08)" stroke-width="1"/>
+    
+  </svg>

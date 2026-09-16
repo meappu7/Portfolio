@@ -1,0 +1,28 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1920 1080" width="1920" height="1080">
+    
+      <defs>
+        <radialGradient id="glow-skills" cx="75%" cy="50%" r="60%">
+          <stop offset="0%" stop-color="#282828" stop-opacity="0.6"/>
+          <stop offset="65%" stop-color="#090909" stop-opacity="0.95"/>
+          <stop offset="100%" stop-color="#020202" stop-opacity="1"/>
+        </radialGradient>
+      </defs>
+      <rect width="1920" height="1080" fill="url(#glow-skills)"/>
+      <g opacity="0.1" stroke="#ffffff" stroke-width="1">
+        <circle cx="1400" cy="540" r="60" fill="none" stroke-dasharray="6,10"/>
+<circle cx="1400" cy="540" r="100" fill="none" stroke-dasharray="none"/>
+<circle cx="1400" cy="540" r="140" fill="none" stroke-dasharray="6,10"/>
+<circle cx="1400" cy="540" r="180" fill="none" stroke-dasharray="none"/>
+<circle cx="1400" cy="540" r="220" fill="none" stroke-dasharray="6,10"/>
+<circle cx="1400" cy="540" r="260" fill="none" stroke-dasharray="none"/>
+<circle cx="1400" cy="540" r="300" fill="none" stroke-dasharray="6,10"/>
+<circle cx="1400" cy="540" r="340" fill="none" stroke-dasharray="none"/>
+<circle cx="1400" cy="540" r="380" fill="none" stroke-dasharray="6,10"/>
+<circle cx="1400" cy="540" r="420" fill="none" stroke-dasharray="none"/>
+<circle cx="1400" cy="540" r="460" fill="none" stroke-dasharray="6,10"/>
+<circle cx="1400" cy="540" r="500" fill="none" stroke-dasharray="none"/>
+        <line x1="1400" y1="60" x2="1400" y2="1020"/>
+        <line x1="920" y1="540" x2="1880" y2="540"/>
+      </g>
+    
+  </svg>
