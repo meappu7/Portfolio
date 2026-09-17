@@ -75,7 +75,44 @@ export const App: React.FC = () => {
       );
     }
 
-    // 2. Animate out current content
+    // 2. Background Poster Transition (Scale + Blur + Opacity)
+    const currentPoster = document.getElementById(`poster-${SECTIONS[currentIndex].id}`);
+    const targetPoster = document.getElementById(`poster-${SECTIONS[targetIndex].id}`);
+
+    if (currentPoster) {
+      tl.to(
+        currentPoster,
+        {
+          opacity: 0,
+          scale: 1.08,
+          filter: 'grayscale(1) contrast(1.06) brightness(0.35) blur(8px)',
+          duration: 0.8,
+          ease: 'power2.inOut'
+        },
+        0
+      );
+    }
+
+    if (targetPoster) {
+      tl.fromTo(
+        targetPoster,
+        {
+          opacity: 0,
+          scale: 1.08,
+          filter: 'grayscale(1) contrast(1.06) brightness(0.35) blur(8px)'
+        },
+        {
+          opacity: 1,
+          scale: 1,
+          filter: 'grayscale(1) contrast(1.06) brightness(0.58) blur(0px)',
+          duration: 1.05,
+          ease: 'power3.out'
+        },
+        0.2
+      );
+    }
+
+    // 3. Animate out current content
     if (currentPanel) {
       const currentCopy = currentPanel.querySelector('.panel-copy');
       if (currentCopy) {
@@ -93,7 +130,7 @@ export const App: React.FC = () => {
       tl.set(currentPanel, { opacity: 0, visibility: 'hidden', pointerEvents: 'none' }, 0.6);
     }
 
-    // 3. Reveal target panel & animate in new content
+    // 4. Reveal target panel & animate in new content
     if (targetPanel) {
       tl.set(targetPanel, { opacity: 1, visibility: 'visible', pointerEvents: 'auto' }, 0.55);
 

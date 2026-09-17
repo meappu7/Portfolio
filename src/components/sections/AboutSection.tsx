@@ -31,6 +31,36 @@ export const AboutSection: React.FC<AboutSectionProps> = ({ isActive }) => {
         <p>
           Technology can be sophisticated and immensely complex under the hood. For the human on the other side of the glass, it should feel intuitive, effortless, and impossible to forget.
         </p>
+
+        <div style={{
+          display: 'flex',
+          alignItems: 'center',
+          gap: '1rem',
+          marginTop: '2rem',
+          padding: '1rem 1.25rem',
+          border: '1px solid rgba(255,255,255,0.12)',
+          borderRadius: '0.85rem',
+          background: 'rgba(255,255,255,0.04)',
+          backdropFilter: 'blur(10px)'
+        }}>
+          <img
+            src="/assets/images/anfil.png"
+            alt="Anfil"
+            style={{
+              width: '3.8rem',
+              height: '3.8rem',
+              borderRadius: '50%',
+              objectFit: 'cover',
+              objectPosition: 'center 15%',
+              border: '1px solid rgba(255,255,255,0.25)',
+              filter: 'grayscale(1) contrast(1.1) brightness(0.95)'
+            }}
+          />
+          <div>
+            <strong style={{ display: 'block', color: '#fff', fontSize: '0.92rem', letterSpacing: '0.04em', textTransform: 'uppercase' }}>Anfil</strong>
+            <span style={{ fontSize: '0.78rem', color: 'rgba(255,255,255,0.65)' }}>Creative Developer & Technical Architect</span>
+          </div>
+        </div>
       </div>
     </section>
   );

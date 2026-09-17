@@ -1,4 +1,4 @@
-﻿:root {
+:root {
   color-scheme: dark;
   --bg: #080808;
   --bg-surface: #101010;
@@ -159,10 +159,17 @@ button:focus-visible, a:focus-visible {
   transition: opacity 800ms cubic-bezier(0.16, 1, 0.3, 1), transform 1200ms cubic-bezier(0.16, 1, 0.3, 1);
 }
 
+@keyframes subtle-drift {
+  0% { transform: scale(1.015) translate3d(0, 0, 0); }
+  50% { transform: scale(1.035) translate3d(-0.3%, -0.3%, 0); }
+  100% { transform: scale(1.015) translate3d(0, 0, 0); }
+}
+
 .background-poster.is-active,
 .background-video.is-active {
   opacity: 1;
-  transform: scale(1);
+  transform: scale(1.025);
+  animation: subtle-drift 14s ease-in-out infinite alternate;
 }
 
 body.is-loading .background-poster,
@@ -1387,6 +1394,15 @@ body.cursor-link .scroll-cursor span {
   .content-shade {
     background: linear-gradient(0deg, rgba(0,0,0,0.96) 0%, rgba(0,0,0,0.85) 45%, rgba(0,0,0,0.2) 75%, transparent 100%);
   }
+  .background-poster {
+    object-position: var(--mobile-object-position, center 30%);
+  }
+  #poster-intro { --mobile-object-position: 50% 25%; }
+  #poster-about { --mobile-object-position: 72% 25%; }
+  #poster-work { --mobile-object-position: 70% 25%; }
+  #poster-skills { --mobile-object-position: 75% 25%; }
+  #poster-experience { --mobile-object-position: 75% 25%; }
+  #poster-contact { --mobile-object-position: 65% 25%; }
 }
 
 @media (max-width: 620px) {

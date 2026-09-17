@@ -46,7 +46,30 @@ export const ContactModal: React.FC<ContactModalProps> = ({ isOpen, onClose }) =
           Close ✕
         </button>
 
-        <p className="modal-kicker">05 Communication</p>
+        <div style={{ display: 'flex', alignItems: 'center', gap: '1.2rem', marginBottom: '1.2rem' }}>
+          <img
+            src="/assets/images/anfil.png"
+            alt="Anfil"
+            style={{
+              width: '4.5rem',
+              height: '4.5rem',
+              borderRadius: '50%',
+              objectFit: 'cover',
+              objectPosition: 'center 20%',
+              border: '1.5px solid rgba(255, 255, 255, 0.35)',
+              filter: 'grayscale(1) contrast(1.1) brightness(0.9)',
+              boxShadow: '0 8px 25px rgba(0,0,0,0.5)'
+            }}
+          />
+          <div>
+            <p className="modal-kicker" style={{ margin: 0 }}>05 Communication</p>
+            <div style={{ display: 'flex', alignItems: 'center', gap: '0.5rem', marginTop: '0.2rem' }}>
+              <span style={{ width: '8px', height: '8px', borderRadius: '50%', background: '#4ade80', display: 'inline-block', boxShadow: '0 0 8px #4ade80' }} />
+              <span style={{ fontSize: '0.74rem', color: 'rgba(255,255,255,0.7)', letterSpacing: '0.04em' }}>Available for select collaborations</span>
+            </div>
+          </div>
+        </div>
+
         <h2 id="contact-modal-title">Let's Build Together</h2>
         <p style={{ color: 'rgba(255,255,255,0.72)', fontSize: '0.95rem', lineHeight: '1.6' }}>
           Have a vision for a cinematic digital platform, an interactive product, or high-performance engineering? Drop a note below or reach out directly.
