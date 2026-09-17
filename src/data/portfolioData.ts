@@ -7,7 +7,7 @@ export const SECTIONS: SectionMeta[] = [
     label: 'Intro',
     kickerNumber: '00',
     kickerLabel: 'Origin',
-    poster: '/assets/media/intro.jpg',
+    poster: '/assets/images/anfil_hero.png',
     video: '/assets/media/intro.mp4',
     title: 'Code. Architecture. Vision.'
   },
@@ -17,7 +17,7 @@ export const SECTIONS: SectionMeta[] = [
     label: 'About',
     kickerNumber: '01',
     kickerLabel: 'About',
-    poster: '/assets/media/about.jpg',
+    poster: '/assets/media/about.svg',
     video: '/assets/media/about.mp4',
     title: 'Engineering Digital Experiences with Purpose'
   },
@@ -27,7 +27,7 @@ export const SECTIONS: SectionMeta[] = [
     label: 'Work',
     kickerNumber: '02',
     kickerLabel: 'Selected Work',
-    poster: '/assets/media/work.jpg',
+    poster: '/assets/media/work.svg',
     video: '/assets/media/work.mp4',
     title: 'Crafted for Scalability & Impact'
   },
@@ -37,7 +37,7 @@ export const SECTIONS: SectionMeta[] = [
     label: 'Skills',
     kickerNumber: '03',
     kickerLabel: 'Expertise',
-    poster: '/assets/media/skills.jpg',
+    poster: '/assets/media/skills.svg',
     video: '/assets/media/skills.mp4',
     title: 'Capabilities & Technical Arsenal'
   },
@@ -47,7 +47,7 @@ export const SECTIONS: SectionMeta[] = [
     label: 'Experience',
     kickerNumber: '04',
     kickerLabel: 'Journey',
-    poster: '/assets/media/experience.jpg',
+    poster: '/assets/media/experience.svg',
     video: '/assets/media/experience.mp4',
     title: 'Track Record & Milestones'
   },
@@ -57,7 +57,7 @@ export const SECTIONS: SectionMeta[] = [
     label: 'Contact',
     kickerNumber: '05',
     kickerLabel: 'Contact',
-    poster: '/assets/media/contact.jpg',
+    poster: '/assets/media/contact.svg',
     video: '/assets/media/contact.mp4',
     title: "Let's Build Something Memorable"
   }
