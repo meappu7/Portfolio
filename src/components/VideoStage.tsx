@@ -1,5 +1,6 @@
 import React, { useEffect, useRef } from 'react';
 import { SectionMeta } from '../types';
+import MoltenMetal from './MoltenMetal';
 
 interface VideoStageProps {
   sections: SectionMeta[];
@@ -105,7 +106,7 @@ export const VideoStage: React.FC<VideoStageProps> = ({
       {/* 60fps Living Cinematic Canvas */}
       <canvas ref={canvasRef} className="background-canvas" />
 
-      {/* Section Posters with Crossfade */}
+      {/* Section Posters with Crossfade (Image Stage) */}
       {sections.map((section, idx) => {
         const isActive = idx === currentSectionIndex;
         return (
@@ -119,6 +120,29 @@ export const VideoStage: React.FC<VideoStageProps> = ({
           />
         );
       })}
+
+      {/* MoltenMetal WebGL Liquid Wave Shader Layer (Overlay on top of Image) */}
+      <MoltenMetal
+        color1="#5227FF"
+        color2="#FF9FFC"
+        color3="#FFFFFF"
+        speed={0.3}
+        scale={3.5}
+        detail={3}
+        glow={1.4}
+        coreSize={0.08}
+        swirl={1}
+        fold={-0.2}
+        blackPoint={0.08}
+        brightness={1.2}
+        colorMode="molten"
+        grain
+        grainIntensity={0.04}
+        mouseInteraction
+        mouseStrength={0.25}
+        opacity={0.32}
+        style={{ zIndex: 2 }}
+      />
 
       {/* Visual Treatments */}
       <div className="video-treatment" />
