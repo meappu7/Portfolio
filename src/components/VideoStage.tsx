@@ -121,26 +121,26 @@ export const VideoStage: React.FC<VideoStageProps> = ({
         );
       })}
 
-      {/* MoltenMetal WebGL Liquid Wave Shader Layer (Overlay on top of Image) */}
+      {/* MoltenMetal WebGL Liquid Wave Shader Layer (Grayscale 20% Opacity Overlay) */}
       <MoltenMetal
-        color1="#5227FF"
-        color2="#FF9FFC"
-        color3="#FFFFFF"
+        color1="#1c1c1c"
+        color2="#666666"
+        color3="#dddddd"
         speed={0.3}
         scale={3.5}
         detail={3}
-        glow={1.4}
+        glow={1.3}
         coreSize={0.08}
         swirl={1}
         fold={-0.2}
         blackPoint={0.08}
-        brightness={1.2}
-        colorMode="molten"
+        brightness={1.1}
+        colorMode="monochrome"
         grain
-        grainIntensity={0.04}
+        grainIntensity={0.03}
         mouseInteraction
         mouseStrength={0.25}
-        opacity={0.32}
+        opacity={0.20}
         style={{ zIndex: 2 }}
       />
 
