@@ -135,8 +135,8 @@ export const App: React.FC = () => {
       tl.set(targetPanel, { opacity: 1, visibility: 'visible', pointerEvents: 'auto' }, 0.55);
 
       const targetCopy = targetPanel.querySelector('.panel-copy');
-      const targetHeading = targetPanel.querySelector('.section-heading');
-      const targetKicker = targetPanel.querySelector('.section-kicker');
+      const targetHeading = targetPanel.querySelector('.section-heading, .hero-title');
+      const targetKicker = targetPanel.querySelector('.section-kicker, .intro-subline');
       const targetParagraphs = targetPanel.querySelectorAll('p:not(.section-kicker), .project-list, .skills-grid, .experience-timeline, .contact-actions');
 
       if (targetCopy) {

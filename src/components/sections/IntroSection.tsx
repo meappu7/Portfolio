@@ -14,11 +14,8 @@ export const IntroSection: React.FC<IntroSectionProps> = ({ isActive }) => {
     const words = wordsRef.current.filter(Boolean) as HTMLSpanElement[];
     if (words.length === 0) return;
 
-    // Reset initial word states
-    gsap.set(words, { yPercent: 120, opacity: 0 });
-    gsap.set(words[0], { yPercent: 0, opacity: 1 });
-
-    const tl = gsap.timeline({ repeat: -1 });
+    // Build timeline
+    const tl = gsap.timeline({ repeat: -1, paused: !isActive });
 
     words.forEach((word, index) => {
       const nextWord = words[(index + 1) % words.length];
@@ -26,9 +23,9 @@ export const IntroSection: React.FC<IntroSectionProps> = ({ isActive }) => {
       tl.to(word, {
         yPercent: -120,
         opacity: 0,
-        duration: 0.85,
-        ease: 'power3.inOut',
-        delay: 1.8
+        duration: 1.1,
+        ease: 'power4.inOut',
+        delay: 3.8
       })
       .fromTo(
         nextWord,
@@ -36,10 +33,10 @@ export const IntroSection: React.FC<IntroSectionProps> = ({ isActive }) => {
         {
           yPercent: 0,
           opacity: 1,
-          duration: 0.85,
-          ease: 'power3.inOut'
+          duration: 1.1,
+          ease: 'power4.inOut'
         },
-        '<0.15'
+        '<0.1'
       );
     });
 
@@ -49,6 +46,21 @@ export const IntroSection: React.FC<IntroSectionProps> = ({ isActive }) => {
       tl.kill();
     };
   }, []);
+
+  // When section becomes active, reset to initial word and play timeline from start
+  useEffect(() => {
+    const words = wordsRef.current.filter(Boolean) as HTMLSpanElement[];
+    if (words.length === 0 || !timelineRef.current) return;
+
+    if (isActive) {
+      // Reset all words
+      gsap.set(words, { yPercent: 120, opacity: 0 });
+      gsap.set(words[0], { yPercent: 0, opacity: 1 });
+      timelineRef.current.restart();
+    } else {
+      timelineRef.current.pause();
+    }
+  }, [isActive]);
 
   return (
     <section
